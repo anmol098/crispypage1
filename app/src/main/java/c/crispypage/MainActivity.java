@@ -90,8 +90,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final String userSuggest = editTextSuggest.getText().toString().trim();
 
 
-        //Log.e("null","values"+userImage);
-
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST,ADD_USER_URL,
                 new Response.Listener<String>() {
