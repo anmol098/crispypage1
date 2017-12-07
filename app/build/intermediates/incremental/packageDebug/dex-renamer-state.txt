@@ -1,0 +1,7 @@
+#Thu Dec 07 17:39:48 IST 2017
+base.0=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_43a8c668d08966407d3ed9f47d9fa9f8cdea78c3
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_89d352d9b6854942af3a41fa4fcdef94e525a5c8\\classes.dex
+base.1=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_89d352d9b6854942af3a41fa4fcdef94e525a5c8
+file.0=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_43a8c668d08966407d3ed9f47d9fa9f8cdea78c3\\classes.dex
