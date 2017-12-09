@@ -18,7 +18,8 @@
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/NoActionBar">
+            android:theme="@style/NoActionBar"
+            >
         </activity>
         <activity android:name=".activity.activity_signup" />
         <activity android:name=".activity.ResetPasswordActivity" />
