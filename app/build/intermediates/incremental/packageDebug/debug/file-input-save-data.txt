@@ -1,4 +1,5 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Sat Dec 09 01:37:18 IST 2017
 2.base=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
 5.set=DEX
@@ -12,6 +13,21 @@ count=6
 5.baseType=DIRECTORY
 2.path=classes.dex
 5.base=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+=======
+#Sat Dec 09 18:33:13 IST 2017
+2.base=/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/transforms/dexMerger/debug/14
+5.set=DEX
+0.path=classes.dex
+2.baseType=DIRECTORY
+3.base=/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/transforms/dexMerger/debug/12
+2.set=DEX
+1.path=classes.dex
+4.base=/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/transforms/dexMerger/debug/15
+count=6
+5.baseType=DIRECTORY
+2.path=classes.dex
+5.base=/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/transforms/dexMerger/debug/16
+>>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
 4.set=DEX
 3.path=classes.dex
 3.baseType=DIRECTORY
@@ -19,9 +35,16 @@ count=6
 4.path=classes.dex
 1.baseType=DIRECTORY
 5.path=classes.dex
+<<<<<<< HEAD
 0.base=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
 0.baseType=DIRECTORY
 3.set=DEX
 1.base=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+=======
+0.base=/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/transforms/dexMerger/debug/13
+0.baseType=DIRECTORY
+3.set=DEX
+1.base=/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/transforms/dexMerger/debug/11
+>>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
 4.baseType=DIRECTORY
 0.set=DEX

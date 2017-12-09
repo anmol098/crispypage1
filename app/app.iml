@@ -165,6 +165,7 @@
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-26.1.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-license-11.6.2" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-impl-license-11.6.2" level="project" />
+    <orderEntry type="library" name="com.github.bumptech.glide:glide:3.7.0@jar" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-tasks-license-11.6.2" level="project" />
   </component>
 </module>

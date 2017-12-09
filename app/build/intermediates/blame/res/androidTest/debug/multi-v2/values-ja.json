@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-ja\\values-ja.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\values-ja\\values-ja.xml",
+=======
+            "outputFile": "/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ja/values-ja.xml",
+            "map": [
+                {
+                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/values-ja/values-ja.xml",
+>>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +28,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.6.2.aar\\99d93a96dbcbfe9ee1d203b5296da642\\res\\values-ja\\values.xml",
+=======
+                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/7b1fd430bb213aa6170f27fec2a4437d/res/values-ja/values.xml",
+>>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +49,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.6.2.aar\\63bfb70d702298adc15fc69d07e6b0e2\\res\\values-ja\\values.xml",
+=======
+                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/83e049b85a23cee08d937dc0602ac8cf/res/values-ja/values.xml",
+>>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

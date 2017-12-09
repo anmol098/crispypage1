@@ -1,6 +1,7 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
@@ -15,6 +16,12 @@
                 },
                 {
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\6bf8a8de169a9797430395642f4ee817\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+=======
+            "outputFile": "/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4a21a65b6060b3e95349d7cde5a45056/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+>>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -31,6 +38,19 @@
                         "endColumns": "59,69,70,71,57,57,105,63,62,12",
                         "endOffsets": "666,736,807,879,937,995,1101,1165,1228,1410"
                     }
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+>>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
                 }
             ]
         }

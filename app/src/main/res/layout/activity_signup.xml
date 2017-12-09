@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="c.crispypage.activity_signup">
+    tools:context="c.crispypage.activity.activity_signup">
 
     <LinearLayout
         android:layout_width="fill_parent"
