@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Update_at_08_12_2017_23_10__Default_" date="1512754803277" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2017_23_10__Default_/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 08-12-2017 23:10 [Default]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+    <option name="AFTER_PATH" value=".gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2017_23_10__Default_/taskArtifacts.lock" />
+  </binary>
+</changelist>
