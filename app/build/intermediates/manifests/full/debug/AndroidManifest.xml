@@ -10,6 +10,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.screen.portrait" />
 
@@ -29,17 +31,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="c.crispypage.MainActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
-        <activity android:name="c.crispypage.activity_signup" />
-        <activity android:name="c.crispypage.ResetPasswordActivity" />
-        <activity android:name="c.crispypage.LoginActivity" >
-=======
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
@@ -51,27 +42,18 @@
         <activity android:name="c.crispypage.activity.activity_signup" />
         <activity android:name="c.crispypage.activity.ResetPasswordActivity" />
         <activity android:name="c.crispypage.activity.LoginActivity" >
->>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-=======
         <activity android:name="c.crispypage.activity.AboutUsActivity" />
         <activity android:name="c.crispypage.activity.PrivacyPolicyActivity" />
->>>>>>> db922de4777f0689b3a262f51f9f8f78f684d41b
 
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
@@ -97,6 +79,11 @@
             android:enabled="true"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"

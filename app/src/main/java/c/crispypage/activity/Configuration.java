@@ -16,5 +16,7 @@ public class Configuration {
     public static final String KEY_CONTACT = "uContact";
     public static final String KEY_ADDRESS = "uAddress";
     public static final String KEY_SUGGEST = "uSuggest";
+    public static final String KEY_URL = "uLink";
+    public static final String KEY_ID = "uId";
     public  static final String KEY_ACTION = "action";
 }
