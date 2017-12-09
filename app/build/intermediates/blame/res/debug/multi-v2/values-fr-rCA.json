@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rCA\\values-fr-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\values-fr-rCA\\values-fr-rCA.xml",
-=======
-            "outputFile": "/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
-            "map": [
-                {
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/values-fr-rCA/values-fr-rCA.xml",
->>>>>>> origin/master
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -28,7 +21,6 @@
                     }
                 },
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.6.2.aar\\63bfb70d702298adc15fc69d07e6b0e2\\res\\values-fr-rCA\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
@@ -47,9 +39,6 @@
                 },
                 {
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.6.2.aar\\99d93a96dbcbfe9ee1d203b5296da642\\res\\values-fr-rCA\\values.xml",
-=======
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/7b1fd430bb213aa6170f27fec2a4437d/res/values-fr-rCA/values.xml",
->>>>>>> origin/master
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -64,26 +53,6 @@
                         "endColumns": "219",
                         "endOffsets": "3416"
                     }
-<<<<<<< HEAD
-=======
-                },
-                {
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/83e049b85a23cee08d937dc0602ac8cf/res/values-fr-rCA/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "287,391,603,731,838,1068,1199,1337,1591,1701,1917,2051,2270,2475,2574,2664",
-                        "endColumns": "103,211,127,106,229,130,137,253,109,215,133,218,204,98,89,108",
-                        "endOffsets": "390,602,730,837,1067,1198,1336,1590,1700,1916,2050,2269,2474,2573,2663,2772"
-                    },
-                    "to": {
-                        "startLines": "21,22,23,24,25,26,27,29,30,31,32,33,34,35,36,37",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2131,2239,2451,2583,2694,2924,3059,3421,3675,3789,4005,4143,4362,4571,4674,4768",
-                        "endColumns": "107,211,131,110,229,134,141,253,113,215,137,218,208,102,93,112",
-                        "endOffsets": "2234,2446,2578,2689,2919,3054,3196,3670,3784,4000,4138,4357,4566,4669,4763,4876"
-                    }
->>>>>>> origin/master
                 }
             ]
         }

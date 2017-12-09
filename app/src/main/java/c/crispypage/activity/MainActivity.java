@@ -53,6 +53,8 @@ import java.util.Map;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -101,9 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // tags used to attach the fragments
     private static final String TAG_HOME = "home";
-    private static final String TAG_PHOTOS = "photos";
-    private static final String TAG_MOVIES = "movies";
-    private static final String TAG_NOTIFICATIONS = "notifications";
+    private static final String TAG_ORDER = "order";
+    private static final String TAG_PENDING_ORDER = "pending order";
+    private static final String TAG_SUPPORT = "support";
     private static final String TAG_SETTINGS = "settings";
     public static String CURRENT_TAG = TAG_HOME;
 
@@ -144,7 +146,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //getting firebase objects
         mStorageReference = FirebaseStorage.getInstance().getReference();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_PATH_UPLOADS);
-
 
         mHandler = new Handler();
 
@@ -315,17 +316,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;
                         break;
-                    case R.id.nav_photos:
+                    case R.id.nav_order:
                         navItemIndex = 1;
-                        CURRENT_TAG = TAG_PHOTOS;
+                        CURRENT_TAG = TAG_ORDER;
                         break;
-                    case R.id.nav_movies:
+                    case R.id.nav_pending_order:
                         navItemIndex = 2;
-                        CURRENT_TAG = TAG_MOVIES;
+                        CURRENT_TAG = TAG_PENDING_ORDER;
                         break;
-                    case R.id.nav_notifications:
+                    case R.id.nav_support:
                         navItemIndex = 3;
-                        CURRENT_TAG = TAG_NOTIFICATIONS;
+                        CURRENT_TAG = TAG_SUPPORT;
                         break;
                     case R.id.nav_settings:
                         navItemIndex = 4;

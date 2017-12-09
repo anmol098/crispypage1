@@ -1,7 +1,6 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
@@ -16,12 +15,6 @@
                 },
                 {
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\8aeb04e8a9e629ac152264eacf71f1ec\\res\\values-v24\\values-v24.xml",
-=======
-            "outputFile": "/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
-            "map": [
-                {
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/829c5b7fd40941446377c4c44f7e3adb/res/values-v24/values-v24.xml",
->>>>>>> origin/master
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -36,19 +29,6 @@
                         "endColumns": "65,60,65,66",
                         "endOffsets": "680,741,807,874"
                     }
-<<<<<<< HEAD
-=======
-                },
-                {
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/values-v24/values-v24.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,212,347,416,480,549",
-                        "endColumns": "156,134,68,63,68,69",
-                        "endOffsets": "207,342,411,475,544,614"
-                    }
->>>>>>> origin/master
                 }
             ]
         }

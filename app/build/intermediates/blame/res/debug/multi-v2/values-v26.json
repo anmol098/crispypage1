@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\values-v26\\values-v26.xml",
-=======
-            "outputFile": "/Users/kjaganmohan/Desktop/crispypage/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
-            "map": [
-                {
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/values-v26/values-v26.xml",
->>>>>>> origin/master
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -30,11 +23,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\6bf8a8de169a9797430395642f4ee817\\res\\values-v26\\values-v26.xml",
-=======
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4a21a65b6060b3e95349d7cde5a45056/res/values-v26/values-v26.xml",
->>>>>>> origin/master
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",

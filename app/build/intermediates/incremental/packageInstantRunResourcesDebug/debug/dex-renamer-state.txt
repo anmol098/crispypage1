@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-#Sun Dec 10 02:19:15 IST 2017
-=======
-#Sun Dec 10 01:47:18 IST 2017
->>>>>>> origin/master
+#Sun Dec 10 04:16:21 IST 2017
