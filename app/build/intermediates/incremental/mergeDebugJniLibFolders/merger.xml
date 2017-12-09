@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="C:\Users\Anmol Pratap Singh\Desktop\CrispyPage\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Anmol Pratap Singh\Desktop\CrispyPage\app\src\debug\jniLibs"/></dataSet></merger>
+=======
+<merger version="3"><dataSet config="main"><source path="/Users/kjaganmohan/Desktop/crispypage/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/kjaganmohan/Desktop/crispypage/app/src/debug/jniLibs"/></dataSet></merger>
+>>>>>>> origin/master

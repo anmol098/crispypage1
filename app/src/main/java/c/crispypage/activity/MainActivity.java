@@ -161,8 +161,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
-
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.hamburger_icon);
+        getSupportActionBar().hide();
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -303,6 +305,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
+
+
+
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
@@ -425,6 +430,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+
+        if(id == R.id.home){
+            drawer.openDrawer(GravityCompat.START);
+            return true;
+        }
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
             Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
