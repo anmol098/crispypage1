@@ -8,15 +8,13 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-
-
-
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="15dp">
+        android:layout_margin="15dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp">
        <EditText
            android:id="@+id/email"
            android:layout_width="match_parent"
@@ -27,46 +25,75 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/email"
             android:hint="Full Name"/>
         <Button
             android:id="@+id/select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/name"
             android:text="Select Documents"
             />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/select"
+            android:layout_toRightOf="@+id/select"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/select"
+            android:layout_alignBottom="@+id/select"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@+id/progressbar"
+            android:layout_toRightOf="@+id/progressbar"
+            android:text="" />
         <EditText
             android:id="@+id/copy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/select"
             android:hint="Number Of Copies"/>
         <EditText
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/copy"
             android:hint="Address"/>
         <EditText
             android:id="@+id/contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/address"
             android:hint="Contact Number"/>
         <EditText
             android:id="@+id/suggest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/contact"
             android:hint="Suggestion"/>
         <Button
             android:id="@+id/submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/suggest"
             android:text="Submit"/>
-        </LinearLayout>
-
+        </RelativeLayout>
 
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

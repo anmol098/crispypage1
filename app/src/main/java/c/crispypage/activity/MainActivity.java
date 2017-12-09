@@ -3,14 +3,21 @@ package c.crispypage.activity;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.Manifest;
 
 import android.os.Handler;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,6 +31,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +51,15 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
 import c.crispypage.R;
 import c.crispypage.fragment.Home;
 import c.crispypage.fragment.MoviesFragment;
@@ -60,6 +77,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText editTextContact;
     private EditText editTextSuggest;
     private Button buttonUpload, buttonAddDoc;
+    //this is the pic pdf code used in file chooser
+    final static int PICK_PDF_CODE = 2342;
+
+     String fileTextUrl,index;
+
+    //the firebase objects for storage and database
+    StorageReference mStorageReference;
+    DatabaseReference mDatabaseReference;
 
     private NavigationView navigationView;
     private DrawerLayout drawer;
@@ -89,7 +114,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
 
-
+    TextView textViewStatus;
+    ProgressBar progressBar;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -99,7 +125,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-
+        textViewStatus = (TextView) findViewById(R.id.textViewStatus);
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextName = (EditText) findViewById(R.id.name);
@@ -113,6 +140,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttonUpload.setOnClickListener(this);
         buttonAddDoc.setOnClickListener(this);
+
+        //getting firebase objects
+        mStorageReference = FirebaseStorage.getInstance().getReference();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_PATH_UPLOADS);
 
 
         mHandler = new Handler();
@@ -436,9 +467,81 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return null;
         }
     }
+    private void getPDF() {
+        //for greater than lolipop versions we need the permissions asked on runtime
+        //so if the permission is not available user will go to the screen to allow storage permission
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+                    Uri.parse("package:" + getPackageName()));
+            startActivity(intent);
+            return;
+        }
+
+        //creating an intent for file chooser
+        Intent intent = new Intent();
+        intent.setType("application/pdf");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PDF_CODE);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //when the user choses the file
+        if (requestCode == PICK_PDF_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            //if a file is selected
+            if (data.getData() != null) {
+                //uploading the file
+                uploadFile(data.getData());
+            } else {
+                Toast.makeText(this, "No file chosen", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+    public static String getOrderId(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMHHmmss");
+        String currentDateTime = dateFormat.format(new Date()); // Find todays date
+        String id="CP_"+currentDateTime;
+
+        return id;
+    }
+    private void uploadFile(Uri data) {
+        progressBar.setVisibility(View.VISIBLE);
+        StorageReference sRef = mStorageReference.child(Constants.STORAGE_PATH_UPLOADS + System.currentTimeMillis() + ".pdf");
+        sRef.putFile(data)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @SuppressWarnings("VisibleForTests")
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        progressBar.setVisibility(View.GONE);
+                        textViewStatus.setText("File Uploaded Successfully");
+
+                        Upload upload = new Upload(getOrderId(), taskSnapshot.getDownloadUrl().toString());
+                        mDatabaseReference.child(mDatabaseReference.push().getKey()).setValue(upload);
+                        fileTextUrl = taskSnapshot.getDownloadUrl().toString();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                })
+                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                    @SuppressWarnings("VisibleForTests")
+                    @Override
+                    public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                        double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                        textViewStatus.setText((int) progress + "% Uploading...");
+                    }
+                });
+
+    }
 
     private void Submit() {
         final ProgressDialog loading = ProgressDialog.show(this,"Uploading...","Please wait...",false,false);
+        final String orderID = getOrderId();
         final String userTime = getCurrentTimeStamp();
         final String userName = editTextName.getText().toString().trim();
         final String userEmail = editTextEmail.getText().toString().trim();
@@ -446,8 +549,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final String userAddress = editTextAddress.getText().toString().trim();
         final String userContact = editTextContact.getText().toString().trim();
         final String userSuggest = editTextSuggest.getText().toString().trim();
-
-
+        final String fileUrl = fileTextUrl;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Configuration.ADD_USER_URL,
                 new Response.Listener<String>() {
@@ -467,6 +569,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String, String>();
                 params.put(Configuration.KEY_ACTION,"insert");
+                params.put(Configuration.KEY_ID,orderID);
                 params.put(Configuration.KEY_TIME,userTime);
                 params.put(Configuration.KEY_NAME,userName);
                 params.put(Configuration.KEY_EMAIL,userEmail);
@@ -474,6 +577,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 params.put(Configuration.KEY_ADDRESS,userAddress);
                 params.put(Configuration.KEY_CONTACT,userContact);
                 params.put(Configuration.KEY_SUGGEST,userSuggest);
+                params.put(Configuration.KEY_URL,fileUrl);
 
                 return params;
             }
@@ -499,7 +603,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Submit();
         }
         if(v == buttonAddDoc){
-           // showFileChooser();
+           getPDF();
         }
 
     }
