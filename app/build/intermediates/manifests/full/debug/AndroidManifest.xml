@@ -36,8 +36,9 @@
         <activity
             android:name="c.crispypage.activity.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoActionBar"
+            android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" >
+            >
         </activity>
         <activity android:name="c.crispypage.activity.activity_signup" />
         <activity android:name="c.crispypage.activity.ResetPasswordActivity" />

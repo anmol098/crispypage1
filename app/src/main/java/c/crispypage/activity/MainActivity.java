@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //this is the pic pdf code used in file chooser
     final static int PICK_PDF_CODE = 2342;
 
-     String fileTextUrl,index;
+     String fileTextUrl;
 
     //the firebase objects for storage and database
     StorageReference mStorageReference;
@@ -125,7 +125,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         textViewStatus = (TextView) findViewById(R.id.textViewStatus);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
@@ -162,10 +163,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
-        getSupportActionBar().setHomeButtonEnabled(true);
+       /* getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.hamburger_icon);
-        getSupportActionBar().hide();
+        getSupportActionBar().hide();*/
 
 
         fab.setOnClickListener(new View.OnClickListener() {

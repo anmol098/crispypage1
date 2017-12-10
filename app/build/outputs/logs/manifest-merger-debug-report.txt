@@ -186,7 +186,7 @@ ADDED from C:\Users\Anmol Pratap Singh\Desktop\CrispyPage\app\src\main\AndroidMa
 	android:windowSoftInputMode
 		ADDED from C:\Users\Anmol Pratap Singh\Desktop\CrispyPage\app\src\main\AndroidManifest.xml:22:13-54
 	android:theme
-		ADDED from C:\Users\Anmol Pratap Singh\Desktop\CrispyPage\app\src\main\AndroidManifest.xml:23:13-47
+		ADDED from C:\Users\Anmol Pratap Singh\Desktop\CrispyPage\app\src\main\AndroidManifest.xml:23:13-56
 	android:name
 		ADDED from C:\Users\Anmol Pratap Singh\Desktop\CrispyPage\app\src\main\AndroidManifest.xml:20:13-50
 activity#c.crispypage.activity.activity_signup
