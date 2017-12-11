@@ -2,7 +2,9 @@ package c.crispypage.activity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
@@ -50,6 +52,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.jar.Attributes;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -78,14 +81,17 @@ public class MainActivity extends AppCompatActivity  {
     private DrawerLayout drawer;
     private View navHeader;
     private ImageView imgNavHeaderBg, imgProfile;
-    private TextView txtName, txtWebsite;
+    private TextView  txtWebsite;
     private Toolbar toolbar;
     private FloatingActionButton fab;
 
     private static final String urlNavHeaderBg = "https://api.androidhive.info/images/nav-menu-header-bg.jpg";
-    private static final String urlProfileImg = "https://lh3.googleusercontent.com/eCtE_G34M9ygdkmOpYvCag1vBARCmZwnVS6rS5t4JLzJ6QgQSBquM0nuTsCpLhYbKljoyS-txg";
+    private static final String urlProfileImg = " ";
 
     public static int navItemIndex = 0;
+
+    public static final String MyPREFERENCES = "MyPrefs" ;
+
 
     // tags used to attach the fragments
     private static final String TAG_HOME = "home";
@@ -101,6 +107,10 @@ public class MainActivity extends AppCompatActivity  {
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
+
+    private String email;
+
+    SharedPreferences sharedPreferences;
 
 
 
@@ -123,17 +133,13 @@ public class MainActivity extends AppCompatActivity  {
 
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
-        txtName = (TextView) navHeader.findViewById(R.id.name);
         txtWebsite = (TextView) navHeader.findViewById(R.id.website);
         imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
         imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
 
         // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
-       /* getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.hamburger_icon);
-        getSupportActionBar().hide();*/
+
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -159,9 +165,12 @@ public class MainActivity extends AppCompatActivity  {
 
 
     private void loadNavHeader() {
-        // name, website
-        txtName.setText("Jaganmohan");
-        txtWebsite.setText("jaganmohan1997@gmail.com");
+        // name, websiteS
+
+       sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+       String mail = sharedPreferences.getString("email","");
+        //txtName.setText("Jaganmohan");
+        txtWebsite.setText(mail);
 
         // loading header background image
         Glide.with(this).load(urlNavHeaderBg)

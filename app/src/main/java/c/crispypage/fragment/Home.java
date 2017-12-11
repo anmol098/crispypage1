@@ -1,6 +1,7 @@
 package c.crispypage.fragment;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -10,8 +11,10 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,6 +79,8 @@ public class Home extends Fragment implements View.OnClickListener {
 
     TextView textViewStatus;
     ProgressBar progressBar;
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+
 
 
     @Nullable
@@ -113,6 +118,28 @@ public class Home extends Fragment implements View.OnClickListener {
     }
 
 
+    private static String[] PERMISSIONS_STORAGE = {
+            android.Manifest.permission.READ_EXTERNAL_STORAGE,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+    public static void verifyStoragePermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user\
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+
+
+            );
+        }
+    }
+
+
+
 
 
     public static String getCurrentTimeStamp() {
@@ -131,18 +158,10 @@ public class Home extends Fragment implements View.OnClickListener {
     private void getPDF() {
         //for greater than lolipop versions we need the permissions asked on runtime
         //so if the permission is not available user will go to the screen to allow storage permission
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(getActivity(),
-                Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                    Uri.parse("package:" + getActivity().getPackageName()));
-            startActivity(intent);
-            return;
-        }
 
         //creating an intent for file chooser
         Intent intent = new Intent();
-        intent.setType("application/pdf");
+        intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PDF_CODE);
     }
@@ -263,6 +282,7 @@ public class Home extends Fragment implements View.OnClickListener {
                 Submit();
                 break;
             case R.id.select:
+                verifyStoragePermissions(getActivity());
                 getPDF();
                 break;
 

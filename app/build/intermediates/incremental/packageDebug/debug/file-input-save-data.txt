@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Dec 12 02:35:32 IST 2017
+#Tue Dec 12 03:57:08 IST 2017
 0.baseType=DIRECTORY
 0.base=/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/transforms/dexMerger/debug/24
 0.path=classes.dex
