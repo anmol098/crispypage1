@@ -70,23 +70,9 @@ import c.crispypage.fragment.PhotosFragment;
 import c.crispypage.fragment.SettingsFragment;
 import c.crispypage.other.CircleTransform;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity  {
 
-    private EditText editTextEmail;
-    private EditText editTextName;
-    private EditText editTextCopies;
-    private EditText editTextAddress;
-    private EditText editTextContact;
-    private EditText editTextSuggest;
-    private Button buttonUpload, buttonAddDoc;
-    //this is the pic pdf code used in file chooser
-    final static int PICK_PDF_CODE = 2342;
 
-     String fileTextUrl;
-
-    //the firebase objects for storage and database
-    StorageReference mStorageReference;
-    DatabaseReference mDatabaseReference;
 
     private NavigationView navigationView;
     private DrawerLayout drawer;
@@ -116,8 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
 
-    TextView textViewStatus;
-    ProgressBar progressBar;
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -128,25 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        textViewStatus = (TextView) findViewById(R.id.textViewStatus);
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
-        editTextEmail = (EditText) findViewById(R.id.email);
-        editTextName = (EditText) findViewById(R.id.name);
-        editTextCopies = (EditText) findViewById(R.id.copy);
-        editTextAddress = (EditText) findViewById(R.id.address);
-        editTextContact = (EditText) findViewById(R.id.contact);
-        editTextSuggest = (EditText) findViewById(R.id.suggest);
-
-        buttonUpload = (Button) findViewById(R.id.submit);
-        buttonAddDoc = (Button) findViewById(R.id.select);
-
-        buttonUpload.setOnClickListener(this);
-        buttonAddDoc.setOnClickListener(this);
-
-        //getting firebase objects
-        mStorageReference = FirebaseStorage.getInstance().getReference();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_PATH_UPLOADS);
 
         mHandler = new Handler();
 
@@ -466,157 +433,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             fab.hide();
     }
 
-    public static String getCurrentTimeStamp() {
-        try {
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String currentDateTime = dateFormat.format(new Date()); // Find todays date
-
-            return currentDateTime;
-        } catch (Exception e) {
-            e.printStackTrace();
-
-            return null;
-        }
-    }
-    private void getPDF() {
-        //for greater than lolipop versions we need the permissions asked on runtime
-        //so if the permission is not available user will go to the screen to allow storage permission
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this,
-                Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-                    Uri.parse("package:" + getPackageName()));
-            startActivity(intent);
-            return;
-        }
-
-        //creating an intent for file chooser
-        Intent intent = new Intent();
-        intent.setType("application/pdf");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PDF_CODE);
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        //when the user choses the file
-        if (requestCode == PICK_PDF_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            //if a file is selected
-            if (data.getData() != null) {
-                //uploading the file
-                uploadFile(data.getData());
-            } else {
-                Toast.makeText(this, "No file chosen", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-    public static String getOrderId(){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMHHmmss");
-        String currentDateTime = dateFormat.format(new Date()); // Find todays date
-        String id="CP_"+currentDateTime;
-
-        return id;
-    }
-    private void uploadFile(Uri data) {
-        progressBar.setVisibility(View.VISIBLE);
-        StorageReference sRef = mStorageReference.child(Constants.STORAGE_PATH_UPLOADS + System.currentTimeMillis() + ".pdf");
-        sRef.putFile(data)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @SuppressWarnings("VisibleForTests")
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        progressBar.setVisibility(View.GONE);
-                        textViewStatus.setText("File Uploaded Successfully");
-
-                        Upload upload = new Upload(getOrderId(), taskSnapshot.getDownloadUrl().toString());
-                        mDatabaseReference.child(mDatabaseReference.push().getKey()).setValue(upload);
-                        fileTextUrl = taskSnapshot.getDownloadUrl().toString();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                })
-                .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                    @SuppressWarnings("VisibleForTests")
-                    @Override
-                    public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                        double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
-                        textViewStatus.setText((int) progress + "% Uploading...");
-                    }
-                });
-
-    }
-
-    private void Submit() {
-        final ProgressDialog loading = ProgressDialog.show(this,"Uploading...","Please wait...",false,false);
-        final String orderID = getOrderId();
-        final String userTime = getCurrentTimeStamp();
-        final String userName = editTextName.getText().toString().trim();
-        final String userEmail = editTextEmail.getText().toString().trim();
-        final String userCopies = editTextCopies.getText().toString().trim();
-        final String userAddress = editTextAddress.getText().toString().trim();
-        final String userContact = editTextContact.getText().toString().trim();
-        final String userSuggest = editTextSuggest.getText().toString().trim();
-        final String fileUrl = fileTextUrl;
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Configuration.ADD_USER_URL,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        loading.dismiss();
-                        Toast.makeText(MainActivity.this,response,Toast.LENGTH_LONG).show();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this,error.toString(),Toast.LENGTH_LONG).show();
-                    }
-                }){
-            @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params = new HashMap<String, String>();
-                params.put(Configuration.KEY_ACTION,"insert");
-                params.put(Configuration.KEY_ID,orderID);
-                params.put(Configuration.KEY_TIME,userTime);
-                params.put(Configuration.KEY_NAME,userName);
-                params.put(Configuration.KEY_EMAIL,userEmail);
-                params.put(Configuration.KEY_COPIES,userCopies);
-                params.put(Configuration.KEY_ADDRESS,userAddress);
-                params.put(Configuration.KEY_CONTACT,userContact);
-                params.put(Configuration.KEY_SUGGEST,userSuggest);
-                params.put(Configuration.KEY_URL,fileUrl);
-
-                return params;
-            }
-
-        };
-
-        int socketTimeout = 30000; // 30 seconds. You can change it
-        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-
-        stringRequest.setRetryPolicy(policy);
-
-
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-
-        requestQueue.add(stringRequest);
-    }
-
-    @Override
-    public void onClick(View v) {
-        if(v == buttonUpload){
-            Submit();
-        }
-        if(v == buttonAddDoc){
-           getPDF();
-        }
-
-    }
 }
