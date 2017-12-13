@@ -1,6 +1,8 @@
 package c.crispypage.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,10 +23,19 @@ import c.crispypage.R;
 public class LoginActivity extends AppCompatActivity {
 
 
+    public static final String MyPREFERENCES = "MyPrefs" ;
+
+
+
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     private Button btnSignup, btnLogin, btnReset;
+
+    private String email , name;
+
+    SharedPreferences sharedpreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +50,8 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
 
+
+
         // set the view now
         setContentView(R.layout.activity_login);
 
@@ -52,6 +65,9 @@ public class LoginActivity extends AppCompatActivity {
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +98,13 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+
+                editor.putString("email", inputEmail.getText().toString());
+                editor.apply();
+
+
 
                 progressBar.setVisibility(View.VISIBLE);
 
