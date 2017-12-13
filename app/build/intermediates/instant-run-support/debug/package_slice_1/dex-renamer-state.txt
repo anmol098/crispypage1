@@ -1,4 +1,4 @@
-#Mon Dec 11 04:15:39 IST 2017
-base.0=/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/transforms/dexMerger/debug/1
+#Thu Dec 14 01:56:24 IST 2017
+base.0=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.0=classes.dex
 renamed.0=classes.dex

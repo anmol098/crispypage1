@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity  {
     private DrawerLayout drawer;
     private View navHeader;
     private ImageView imgNavHeaderBg, imgProfile;
-    private TextView  txtWebsite;
+    private TextView  txtWebsite,txtName;
     private Toolbar toolbar;
     private FloatingActionButton fab;
 
@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity  {
 
     SharedPreferences sharedPreferences;
 
+    FirebaseAuth mAuth;
+
 
 
     @SuppressLint("WrongViewCast")
@@ -122,6 +124,8 @@ public class MainActivity extends AppCompatActivity  {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
 
@@ -134,6 +138,7 @@ public class MainActivity extends AppCompatActivity  {
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
         txtWebsite = (TextView) navHeader.findViewById(R.id.website);
+        txtName = (TextView) navHeader.findViewById(R.id.name);
         imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
         imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
 
@@ -165,21 +170,21 @@ public class MainActivity extends AppCompatActivity  {
 
 
     private void loadNavHeader() {
-        // name, websiteS
+        FirebaseUser user = mAuth.getCurrentUser();
 
-       sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-       String mail = sharedPreferences.getString("email","");
-        //txtName.setText("Jaganmohan");
-        txtWebsite.setText(mail);
+        txtName.setText(user.getDisplayName());
+        txtWebsite.setText(user.getEmail());
 
         // loading header background image
-        Glide.with(this).load(urlNavHeaderBg)
+        Glide.with(this)
+                .load(urlNavHeaderBg)
                 .crossFade()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(imgNavHeaderBg);
 
         // Loading profile image
-        Glide.with(this).load(urlProfileImg)
+        Glide.with(this)
+                .load(user.getPhotoUrl())
                 .crossFade()
                 .thumbnail(0.5f)
                 .bitmapTransform(new CircleTransform(this))
@@ -416,6 +421,9 @@ public class MainActivity extends AppCompatActivity  {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
             Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            startActivity(new Intent(this, LoginActivity.class));
             return true;
         }
 
