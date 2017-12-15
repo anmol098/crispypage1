@@ -51,6 +51,9 @@ import c.crispypage.activity.Configuration;
 import c.crispypage.activity.Constants;
 import c.crispypage.activity.MainActivity;
 import c.crispypage.activity.Upload;
+import android.widget.ArrayAdapter;
+import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
+
 
 import static android.app.Activity.RESULT_OK;
 
@@ -80,6 +83,10 @@ public class Home extends Fragment implements View.OnClickListener {
     TextView textViewStatus;
     ProgressBar progressBar;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    String[] BINDING = {"Spiral Binding", "Soft Binding", "Strip File", "Folder", "Lamination"};
+    String[] ORIENTATION={"One Sided","Both Sided"};
+    String[] CHOICE = {"Black & White","Colored"};
+    String[] AREA = {"Nungambakkam","Kilpauk","Kattankulathur","Potheri"};
 
 
 
@@ -110,7 +117,29 @@ public class Home extends Fragment implements View.OnClickListener {
         mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_PATH_UPLOADS);
 
 
+        ArrayAdapter<String> bindingAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, BINDING);
+        MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
+                view.findViewById(R.id.Binding_Spinner);
+        materialDesignSpinner.setAdapter(bindingAdapter);
 
+        ArrayAdapter<String> orientationAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, ORIENTATION);
+        MaterialBetterSpinner materialDesignSpinner1 = (MaterialBetterSpinner)
+                view.findViewById(R.id.Orientation_Spinner);
+        materialDesignSpinner1.setAdapter(orientationAdapter);
+
+        ArrayAdapter<String> choiceAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, CHOICE);
+        MaterialBetterSpinner materialDesignSpinner2 = (MaterialBetterSpinner)
+                view.findViewById(R.id.Choice_Spinner);
+        materialDesignSpinner2.setAdapter(choiceAdapter);
+
+        ArrayAdapter<String> areaAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_dropdown_item_1line, AREA);
+        MaterialBetterSpinner materialDesignSpinner3 = (MaterialBetterSpinner)
+                view.findViewById(R.id.Area_Spinner);
+        materialDesignSpinner3.setAdapter(areaAdapter);
 
 
         return view;
@@ -180,7 +209,7 @@ public class Home extends Fragment implements View.OnClickListener {
         }
     }
     public static String getOrderId(){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMHHmmss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyMMHHmmss");
         String currentDateTime = dateFormat.format(new Date()); // Find todays date
         String id="CP_"+currentDateTime;
 

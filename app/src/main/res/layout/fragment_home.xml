@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="c.crispypage.fragment.Home">
 
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-
-        >
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,11 +83,53 @@
                 android:layout_below="@id/select"
                 android:hint="Number Of Copies"/>
         </android.support.design.widget.TextInputLayout>
+
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/Binding_Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/copy1"
+            android:hint="Do You Want Us To Bind It As Well?"
+            android:textColorHint="#05ab9a"
+            app:met_floatingLabel="normal" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/Orientation_Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Binding_Spinner"
+            android:hint="Orientation"
+            android:textColorHint="#05ab9a"
+            app:met_floatingLabel="normal" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/Choice_Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Orientation_Spinner"
+            android:hint="Choice"
+            android:textColorHint="#05ab9a"
+            app:met_floatingLabel="normal" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/Area_Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Choice_Spinner"
+            android:hint="Area"
+            android:textColorHint="#05ab9a"
+            app:met_floatingLabel="normal" />
+
+
+
+
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/address1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/copy1">
+            android:layout_below="@id/Area_Spinner">
             <EditText
                 android:id="@+id/address"
                 android:layout_width="match_parent"
