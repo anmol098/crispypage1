@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -40,6 +41,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -61,7 +63,7 @@ import static android.app.Activity.RESULT_OK;
  * Created by kjaganmohan on 08/12/17.
  */
 
-public class Home extends Fragment implements View.OnClickListener {
+public class Home extends Fragment /*implements View.OnClickListener implements OnItemSelectedListener*/ {
 
 
     private EditText editTextEmail;
@@ -75,6 +77,8 @@ public class Home extends Fragment implements View.OnClickListener {
     final static int PICK_PDF_CODE = 2342;
 
     String fileTextUrl;
+    private Activity rootView;
+
 
     //the firebase objects for storage and database
     StorageReference mStorageReference;
@@ -94,7 +98,7 @@ public class Home extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_home,container,false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         textViewStatus = (TextView) view.findViewById(R.id.textViewStatus);
         progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
@@ -109,8 +113,8 @@ public class Home extends Fragment implements View.OnClickListener {
         buttonUpload = (Button) view.findViewById(R.id.submit);
         buttonAddDoc = (Button) view.findViewById(R.id.select);
 
-        buttonUpload.setOnClickListener(this);
-        buttonAddDoc.setOnClickListener(this);
+        /*buttonUpload.setOnClickListener(this);
+        buttonAddDoc.setOnClickListener(this);*/
 
         //getting firebase objects
         mStorageReference = FirebaseStorage.getInstance().getReference();
@@ -122,24 +126,83 @@ public class Home extends Fragment implements View.OnClickListener {
         MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
                 view.findViewById(R.id.Binding_Spinner);
         materialDesignSpinner.setAdapter(bindingAdapter);
+        materialDesignSpinner.setOnItemSelectedListener(
+                new OnItemSelectedListener() {
+                    public void onItemSelected(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
+                    }
 
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
         ArrayAdapter<String> orientationAdapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_dropdown_item_1line, ORIENTATION);
         MaterialBetterSpinner materialDesignSpinner1 = (MaterialBetterSpinner)
                 view.findViewById(R.id.Orientation_Spinner);
         materialDesignSpinner1.setAdapter(orientationAdapter);
+        materialDesignSpinner1.setOnItemSelectedListener(
+                new OnItemSelectedListener() {
+                    public void onItemSelected(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
+                    }
+
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
 
         ArrayAdapter<String> choiceAdapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_dropdown_item_1line, CHOICE);
         MaterialBetterSpinner materialDesignSpinner2 = (MaterialBetterSpinner)
                 view.findViewById(R.id.Choice_Spinner);
         materialDesignSpinner2.setAdapter(choiceAdapter);
+        materialDesignSpinner2.setOnItemSelectedListener(
+                new OnItemSelectedListener() {
+                    public void onItemSelected(
+                            AdapterView<?> parent, View view, int position, long id) {
+                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
+                    }
+
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
 
         ArrayAdapter<String> areaAdapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_dropdown_item_1line, AREA);
         MaterialBetterSpinner materialDesignSpinner3 = (MaterialBetterSpinner)
                 view.findViewById(R.id.Area_Spinner);
         materialDesignSpinner3.setAdapter(areaAdapter);
+        materialDesignSpinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
+                    }
+
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+
+        buttonUpload.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Submit();
+            }
+        });
+        buttonAddDoc.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                verifyStoragePermissions(getActivity());
+                getPDF();
+            }
+        });
 
 
         return view;
@@ -166,8 +229,6 @@ public class Home extends Fragment implements View.OnClickListener {
             );
         }
     }
-
-
 
 
 
@@ -265,11 +326,13 @@ public class Home extends Fragment implements View.OnClickListener {
                     @Override
                     public void onResponse(String response) {
                         loading.dismiss();
+                        Toast.makeText(getActivity(),response,Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getActivity(),error.toString(),Toast.LENGTH_LONG).show();
                     }
                 }){
             @Override
@@ -303,8 +366,7 @@ public class Home extends Fragment implements View.OnClickListener {
 
         requestQueue.add(stringRequest);
     }
-
-    @Override
+    /*@Override
     public void onClick(final View view) {
         switch (view.getId()){
             case R.id.submit:
@@ -316,7 +378,5 @@ public class Home extends Fragment implements View.OnClickListener {
                 break;
 
         }
-
-
-    }
+}*/
 }

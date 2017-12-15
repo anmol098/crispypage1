@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/name1"
             android:text="Select Documents"
+            android:onClick="select"
             />
 
         <ProgressBar
@@ -166,7 +167,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/suggest1"
-            android:text="Submit"/>
+            android:text="Submit"
+            android:onClick="submit"/>
     </RelativeLayout>
     </ScrollView>
 
