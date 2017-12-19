@@ -63,7 +63,7 @@ import static android.app.Activity.RESULT_OK;
  * Created by kjaganmohan on 08/12/17.
  */
 
-public class Home extends Fragment /*implements View.OnClickListener implements OnItemSelectedListener*/ {
+public class Home extends Fragment  {
 
 
     private EditText editTextEmail;
