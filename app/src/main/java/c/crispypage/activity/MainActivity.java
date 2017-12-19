@@ -430,13 +430,11 @@ public class MainActivity extends AppCompatActivity  {
         // user is in notifications fragment
         // and selected 'Mark all as Read'
         if (id == R.id.action_mark_all_read) {
-            Toast.makeText(getApplicationContext(), "All notifications marked as read!", Toast.LENGTH_LONG).show();
-        }
-
-        // user is in notifications fragment
-        // and selected 'Clear All'
-        if (id == R.id.action_clear_notifications) {
-            Toast.makeText(getApplicationContext(), "Clear all notifications!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            startActivity(new Intent(this, LoginActivity.class));
+            return true;
         }
 
         return super.onOptionsItemSelected(item);

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Tue Dec 19 20:38:12 IST 2017
 base.0=/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/transforms/dexMerger/debug/0
+=======
+#Tue Dec 19 21:55:28 IST 2017
+path.1=classes.dex
+>>>>>>> 741d752cb27fabb8e670bd0a262e37fb270b2c65
 path.0=classes.dex
 renamed.0=classes.dex
