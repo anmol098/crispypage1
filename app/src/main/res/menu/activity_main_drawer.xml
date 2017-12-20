@@ -8,24 +8,14 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/nav_home" />
-        <item
-            android:id="@+id/nav_order"
-            android:icon="@drawable/ic_photo_library_black_24dp"
-            android:title="@string/nav_order" />
-        <item
-            android:id="@+id/nav_pending_order"
-            android:icon="@drawable/ic_local_movies_black_24dp"
-            android:title="@string/nav_pending" />
 
         <item
             android:id="@+id/nav_support"
-            android:icon="@drawable/ic_notifications_black_24dp"
+            android:icon="@drawable/ic_account_circle_black_24dp"
             android:title="Profile" />
 
-        <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_settings_black_24dp"
-            android:title="@string/nav_settings" />
+
+
     </group>
 
     <item android:title="Other">
@@ -33,15 +23,8 @@
             <item
                 android:id="@+id/nav_about_us"
                 android:title="@string/nav_about_us" />
-            <item
-                android:id="@+id/nav_privacy_policy"
-                android:title="@string/privacy_policy" />
-            <item
-                android:id="@+id/nav_FAQ"
-                android:title="@string/nav_FAQ" />
-            <item
-                android:id="@+id/nav_feedback"
-                android:title="@string/nav_Feedback" />
+
+
         </menu>
     </item>
 

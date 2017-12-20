@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #Wed Dec 20 22:07:01 IST 2017
 path.1=classes.dex
+=======
+#Wed Dec 20 21:35:51 IST 2017
+base.0=/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/transforms/dexMerger/debug/0
+>>>>>>> 2bae3c7d8ea12a95921546e1892ac9b46e1aa7d8
 path.0=classes.dex
 renamed.5=classes6.dex
 renamed.4=classes5.dex

@@ -176,7 +176,11 @@
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
+<<<<<<< HEAD
             android:id="@+id/LL"
+=======
+            android:id="@+id/btns"
+>>>>>>> 2bae3c7d8ea12a95921546e1892ac9b46e1aa7d8
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/suggest1"
@@ -201,6 +205,42 @@
                 android:onClick="submit"
                 android:text="PRINT" />
 
+<<<<<<< HEAD
+=======
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/btns">
+
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+
+
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:text="" />
+
+
+
+>>>>>>> 2bae3c7d8ea12a95921546e1892ac9b46e1aa7d8
         </LinearLayout>
 
         <ProgressBar
@@ -224,6 +264,8 @@
             android:layout_marginRight="36dp"
             android:layout_marginTop="14dp"
             android:textColor="#ffffff" />
+
+
 
 
     </RelativeLayout>

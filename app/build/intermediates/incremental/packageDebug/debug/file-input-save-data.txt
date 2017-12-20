@@ -1,10 +1,26 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Wed Dec 20 22:07:01 IST 2017
 4.path=lib/armeabi/libpl_droidsonroids_gif.so
 8.set=DEX
 6.path=lib/mips/libpl_droidsonroids_gif.so
 0.baseType=DIRECTORY
 10.path=classes.dex
+=======
+#Wed Dec 20 21:35:51 IST 2017
+7.path=classes.dex
+2.base=/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/transforms/stripDebugSymbol/debug/0
+5.set=NATIVE_RESOURCE
+0.path=lib/x86/libpl_droidsonroids_gif.so
+2.baseType=DIRECTORY
+3.base=/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/transforms/stripDebugSymbol/debug/0
+7.baseType=DIRECTORY
+2.set=NATIVE_RESOURCE
+1.path=lib/x86_64/libpl_droidsonroids_gif.so
+4.base=/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/transforms/stripDebugSymbol/debug/0
+7.set=DEX
+count=8
+>>>>>>> 2bae3c7d8ea12a95921546e1892ac9b46e1aa7d8
 5.baseType=DIRECTORY
 1.base=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 8.path=classes.dex
