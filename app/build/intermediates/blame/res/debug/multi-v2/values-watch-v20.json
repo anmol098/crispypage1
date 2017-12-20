@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.8.0.aar/f9e6eb236a2bcc1142d10edf54cc4537/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.8.0.aar\\f9400ef4389155b5c8876534dfc1b2d7\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

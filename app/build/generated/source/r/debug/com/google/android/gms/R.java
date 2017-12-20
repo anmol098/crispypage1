@@ -55,6 +55,7 @@ public final class R {
         public static final int adjust_height = 0x7f090023;
         public static final int adjust_width = 0x7f090024;
         public static final int auto = 0x7f090029;
+<<<<<<< HEAD
         public static final int center = 0x7f090037;
         public static final int contact = 0x7f090040;
         public static final int dark = 0x7f090049;
@@ -71,6 +72,43 @@ public final class R {
         public static final int toolbar = 0x7f0900d8;
         public static final int wide = 0x7f0900e9;
         public static final int wrap_content = 0x7f0900ec;
+=======
+<<<<<<< Updated upstream
+        public static final int center = 0x7f090036;
+        public static final int contact = 0x7f09003f;
+        public static final int dark = 0x7f090048;
+        public static final int email = 0x7f090053;
+        public static final int icon_only = 0x7f090069;
+        public static final int light = 0x7f090074;
+        public static final int none = 0x7f09008e;
+        public static final int normal = 0x7f09008f;
+        public static final int progressBar = 0x7f09009a;
+        public static final int radio = 0x7f09009e;
+        public static final int standard = 0x7f0900c8;
+        public static final int text = 0x7f0900d1;
+        public static final int text2 = 0x7f0900d2;
+        public static final int toolbar = 0x7f0900dd;
+        public static final int wide = 0x7f0900ee;
+        public static final int wrap_content = 0x7f0900f1;
+=======
+        public static final int center = 0x7f090034;
+        public static final int contact = 0x7f09003d;
+        public static final int dark = 0x7f090046;
+        public static final int email = 0x7f090051;
+        public static final int icon_only = 0x7f090067;
+        public static final int light = 0x7f090071;
+        public static final int none = 0x7f09008b;
+        public static final int normal = 0x7f09008c;
+        public static final int progressBar = 0x7f090097;
+        public static final int radio = 0x7f09009b;
+        public static final int standard = 0x7f0900c5;
+        public static final int text = 0x7f0900ce;
+        public static final int text2 = 0x7f0900cf;
+        public static final int toolbar = 0x7f0900da;
+        public static final int wide = 0x7f0900ea;
+        public static final int wrap_content = 0x7f0900ed;
+>>>>>>> Stashed changes
+>>>>>>> 8fdca46b835d671187224e343eb0a43a04938c79
     }
     public static final class integer {
         public static final int google_play_services_version = 0x7f0a0007;
