@@ -18,5 +18,10 @@ public class Configuration {
     public static final String KEY_SUGGEST = "uSuggest";
     public static final String KEY_URL = "uLink";
     public static final String KEY_ID = "uId";
+    public static final String KEY_BIND = "uBind";
+    public static final String KEY_ORIENTATION = "uOrientation";
+    public static final String KEY_AREA = "uArea";
+    public static final String KEY_CHOICE = "uChoice";
+    public static final String KEY_DELIVERY="uDelivery";
     public  static final String KEY_ACTION = "action";
 }

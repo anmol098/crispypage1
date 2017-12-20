@@ -64,6 +64,10 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_upload.png.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\drawable\\upload.png"
+    },
+    {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d29c3b5d13f2b3182cc17ea2a91f3306\\res\\drawable-v21\\notification_action_background.xml"
     },
@@ -156,6 +160,10 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_dropdown_item.xml.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\layout\\spinner_dropdown_item.xml"
+    },
+    {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -168,17 +176,8 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_activity_welcome.xml.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/activity_welcome.xml"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
->>>>>>> Stashed changes
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -257,17 +256,8 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\6bf8a8de169a9797430395642f4ee817\\res\\color\\design_error.xml"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_splash.gif.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/splash.gif"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3ca451832bb3b9726ecb048bb069f184/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_notifications_black_24dp.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\drawable-mdpi\\ic_notifications_black_24dp.png"
->>>>>>> Stashed changes
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -418,6 +408,10 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_delivery.png.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\drawable\\delivery.png"
+    },
+    {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
@@ -498,17 +492,8 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\library-material-1.1.0.aar\\5379653e5097c2baa630a89c82589a7f\\res\\drawable-xxhdpi\\ic_expand_more_black_18dp.png"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_logo.png.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/logo.png"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_in.xml.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\anim\\abc_fade_in.xml"
->>>>>>> Stashed changes
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
@@ -611,12 +596,12 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d29c3b5d13f2b3182cc17ea2a91f3306\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu.xml.flat",
@@ -703,17 +688,8 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_activity_splash_screen.xml.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/activity_splash_screen.xml"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_abc_screen_simple_overlay_action_mode.xml.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/layout/abc_screen_simple_overlay_action_mode.xml"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
->>>>>>> Stashed changes
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_normal.xml.flat",
@@ -848,17 +824,8 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_delivery_slide.xml.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/delivery_slide.xml"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3ca451832bb3b9726ecb048bb069f184/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
->>>>>>> Stashed changes
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -1017,17 +984,8 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\8aeb04e8a9e629ac152264eacf71f1ec\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_upload.png.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/upload.png"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-ldrtl-mdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
->>>>>>> Stashed changes
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -1176,6 +1134,10 @@
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\anim_tooltip_enter.xml.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\anim\\tooltip_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash_screen.xml.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_out.xml.flat",
@@ -1442,6 +1404,10 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\d29c3b5d13f2b3182cc17ea2a91f3306\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_delivery_slide.xml.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\layout\\delivery_slide.xml"
+    },
+    {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\layout\\abc_expanded_menu_layout.xml"
     },
@@ -1500,6 +1466,10 @@
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.png.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\drawable\\logo.png"
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_text_cursor_material.xml.flat",
@@ -1714,17 +1684,8 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_delivery.png.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/delivery.png"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_abc_ic_clear_material.xml.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable/abc_ic_clear_material.xml"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\46102fab365ef6e010a7927f28850811\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
->>>>>>> Stashed changes
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -1777,6 +1738,10 @@
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_text_input_password_icon.xml.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\6bf8a8de169a9797430395642f4ee817\\res\\layout\\design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_welcome.xml.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\layout\\activity_welcome.xml"
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -2143,6 +2108,10 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\library-2.0.3.aar\\5af5753fb0f3ff3db96f97fcb8fa3d0d\\res\\drawable-mdpi-v4\\met_ic_clear.png"
     },
     {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_upload_slide.xml.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\layout\\upload_slide.xml"
+    },
+    {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\6bf8a8de169a9797430395642f4ee817\\res\\drawable-xhdpi-v4\\design_ic_visibility.png"
     },
@@ -2157,6 +2126,10 @@
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_spinner_item.xml.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\layout\\spinner_item.xml"
     },
     {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reset_password.xml.flat",
@@ -2203,6 +2176,10 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\6bf8a8de169a9797430395642f4ee817\\res\\drawable-xxhdpi-v4\\design_ic_visibility.png"
     },
     {
+        "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash.gif.flat",
+        "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\drawable\\splash.gif"
+    },
+    {
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -2235,16 +2212,7 @@
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\75039b9cae178a9322975a267d1733d5\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
-<<<<<<< Updated upstream
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
-        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_upload_slide.xml.flat",
-        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/upload_slide.xml"
-=======
         "merged": "C:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\Anmol Pratap Singh\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\46102fab365ef6e010a7927f28850811\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
->>>>>>> Stashed changes
     }
 ]

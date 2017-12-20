@@ -75,4 +75,34 @@
     <string name="slide_2_title">Fast Delivery</string>
     <string name="slide_2_desc">Get the documents delivered within an hour!</string>
 
+    <string-array name="binding_array">
+        <item>Binding</item>
+        <item>Soft Binding</item>
+        <item>File</item>
+        <item>Folder</item>
+        <item>Lamination</item>
+    </string-array>
+
+    <string-array name="orientation_array">
+        <item>ORIENTATION</item>
+        <item>One Sided</item>
+        <item>Both Sided</item>
+    </string-array>
+
+    <string-array name="choice_array">
+        <item>CHOICE</item>
+        <item>Black &amp; white</item>
+        <item>Soft Binding</item>
+
+    </string-array>
+
+    <string-array name="area_array">
+        <item>Area Nearest To</item>
+        <item>Nungambakkam</item>
+        <item>Potheri</item>
+        <item>Kattankulathur</item>
+    </string-array>
+
+
+
 </resources>

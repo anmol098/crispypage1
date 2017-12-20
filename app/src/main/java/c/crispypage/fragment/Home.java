@@ -3,6 +3,7 @@ package c.crispypage.fragment;
 import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -22,6 +24,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,8 +47,10 @@ import com.google.firebase.storage.UploadTask;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import c.crispypage.R;
@@ -59,11 +64,11 @@ import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 import static android.app.Activity.RESULT_OK;
 
-/**
- * Created by kjaganmohan on 08/12/17.
- */
 
 public class Home extends Fragment  {
+    public Home() {
+    }
+
 
 
     private EditText editTextEmail;
@@ -73,24 +78,20 @@ public class Home extends Fragment  {
     private EditText editTextContact;
     private EditText editTextSuggest;
      public Button buttonUpload, buttonAddDoc;
-    //this is the pic pdf code used in file chooser
+
     final static int PICK_PDF_CODE = 2342;
 
     String fileTextUrl;
     private Activity rootView;
 
+    String binding,choice,orientation,area;
 
-    //the firebase objects for storage and database
     StorageReference mStorageReference;
     DatabaseReference mDatabaseReference;
 
     TextView textViewStatus;
     ProgressBar progressBar;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
-    String[] BINDING = {"Spiral Binding", "Soft Binding", "Strip File", "Folder", "Lamination"};
-    String[] ORIENTATION={"One Sided","Both Sided"};
-    String[] CHOICE = {"Black & White","Colored"};
-    String[] AREA = {"Nungambakkam","Kilpauk","Kattankulathur","Potheri"};
 
 
 
@@ -113,78 +114,79 @@ public class Home extends Fragment  {
         buttonUpload = (Button) view.findViewById(R.id.submit);
         buttonAddDoc = (Button) view.findViewById(R.id.select);
 
-        /*buttonUpload.setOnClickListener(this);
-        buttonAddDoc.setOnClickListener(this);*/
 
-        //getting firebase objects
         mStorageReference = FirebaseStorage.getInstance().getReference();
         mDatabaseReference = FirebaseDatabase.getInstance().getReference(Constants.DATABASE_PATH_UPLOADS);
 
 
-        ArrayAdapter<String> bindingAdapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_dropdown_item_1line, BINDING);
-        MaterialBetterSpinner materialDesignSpinner = (MaterialBetterSpinner)
-                view.findViewById(R.id.Binding_Spinner);
-        materialDesignSpinner.setAdapter(bindingAdapter);
-        materialDesignSpinner.setOnItemSelectedListener(
-                new OnItemSelectedListener() {
-                    public void onItemSelected(
-                            AdapterView<?> parent, View view, int position, long id) {
-                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
-                    }
+        Spinner spinner = (Spinner)view.findViewById(R.id.binding);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(view.getContext(), R.array.binding_array,
+                R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        spinner.setAdapter(adapter);
 
-                    public void onNothingSelected(AdapterView<?> parent) {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                binding = parentView.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
+        Spinner spinner1 = (Spinner)view.findViewById(R.id.area);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(view.getContext(), R.array.area_array,
+                R.layout.spinner_item);
+        adapter1.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        spinner1.setAdapter(adapter1);
 
-                    }
-                });
-        ArrayAdapter<String> orientationAdapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_dropdown_item_1line, ORIENTATION);
-        MaterialBetterSpinner materialDesignSpinner1 = (MaterialBetterSpinner)
-                view.findViewById(R.id.Orientation_Spinner);
-        materialDesignSpinner1.setAdapter(orientationAdapter);
-        materialDesignSpinner1.setOnItemSelectedListener(
-                new OnItemSelectedListener() {
-                    public void onItemSelected(
-                            AdapterView<?> parent, View view, int position, long id) {
-                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
-                    }
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                area = parentView.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
 
-                    public void onNothingSelected(AdapterView<?> parent) {
+        Spinner spinner2 = (Spinner)view.findViewById(R.id.choice);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(view.getContext(), R.array.choice_array,
+                R.layout.spinner_item);
+        adapter2.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        spinner2.setAdapter(adapter2);
 
-                    }
-                });
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                choice = parentView.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
 
-        ArrayAdapter<String> choiceAdapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_dropdown_item_1line, CHOICE);
-        MaterialBetterSpinner materialDesignSpinner2 = (MaterialBetterSpinner)
-                view.findViewById(R.id.Choice_Spinner);
-        materialDesignSpinner2.setAdapter(choiceAdapter);
-        materialDesignSpinner2.setOnItemSelectedListener(
-                new OnItemSelectedListener() {
-                    public void onItemSelected(
-                            AdapterView<?> parent, View view, int position, long id) {
-                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
-                    }
+        Spinner spinner3 = (Spinner)view.findViewById(R.id.orientation);
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(view.getContext(), R.array.orientation_array,
+                R.layout.spinner_item);
+        adapter3.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        spinner3.setAdapter(adapter3);
 
-                    public void onNothingSelected(AdapterView<?> parent) {
+        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                orientation = parentView.getItemAtPosition(position).toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
 
-                    }
-                });
 
-        ArrayAdapter<String> areaAdapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_dropdown_item_1line, AREA);
-        MaterialBetterSpinner materialDesignSpinner3 = (MaterialBetterSpinner)
-                view.findViewById(R.id.Area_Spinner);
-        materialDesignSpinner3.setAdapter(areaAdapter);
-        materialDesignSpinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        Toast.makeText(getActivity(), "Selected: " + position, Toast.LENGTH_LONG).show();
-                    }
-
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                });
 
         buttonUpload.setOnClickListener(new View.OnClickListener()
         {
@@ -236,7 +238,7 @@ public class Home extends Fragment  {
         try {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String currentDateTime = dateFormat.format(new Date()); // Find todays date
+            String currentDateTime = dateFormat.format(new Date());
 
             return currentDateTime;
         } catch (Exception e) {
@@ -246,10 +248,6 @@ public class Home extends Fragment  {
         }
     }
     private void getPDF() {
-        //for greater than lolipop versions we need the permissions asked on runtime
-        //so if the permission is not available user will go to the screen to allow storage permission
-
-        //creating an intent for file chooser
         Intent intent = new Intent();
         intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -258,7 +256,7 @@ public class Home extends Fragment  {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        //when the user choses the file
+
         if (requestCode == PICK_PDF_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
             //if a file is selected
             if (data.getData() != null) {
@@ -316,6 +314,10 @@ public class Home extends Fragment  {
         final String userName = editTextName.getText().toString().trim();
         final String userEmail = editTextEmail.getText().toString().trim();
         final String userCopies = editTextCopies.getText().toString().trim();
+        final String userBinding = binding;
+        final String userOrientation = orientation;
+        final String userChoice = choice;
+        final String userArea = area;
         final String userAddress = editTextAddress.getText().toString().trim();
         final String userContact = editTextContact.getText().toString().trim();
         final String userSuggest = editTextSuggest.getText().toString().trim();
@@ -344,10 +346,15 @@ public class Home extends Fragment  {
                 params.put(Configuration.KEY_NAME,userName);
                 params.put(Configuration.KEY_EMAIL,userEmail);
                 params.put(Configuration.KEY_COPIES,userCopies);
+                params.put(Configuration.KEY_BIND,userBinding);
+                params.put(Configuration.KEY_ORIENTATION,userOrientation);
+                params.put(Configuration.KEY_CHOICE,userChoice);
+                params.put(Configuration.KEY_AREA,userArea);
                 params.put(Configuration.KEY_ADDRESS,userAddress);
                 params.put(Configuration.KEY_CONTACT,userContact);
                 params.put(Configuration.KEY_SUGGEST,userSuggest);
                 params.put(Configuration.KEY_URL,fileUrl);
+                params.put(Configuration.KEY_DELIVERY,"PENDING");
 
                 return params;
             }
@@ -366,17 +373,4 @@ public class Home extends Fragment  {
 
         requestQueue.add(stringRequest);
     }
-    /*@Override
-    public void onClick(final View view) {
-        switch (view.getId()){
-            case R.id.submit:
-                Submit();
-                break;
-            case R.id.select:
-                verifyStoragePermissions(getActivity());
-                getPDF();
-                break;
-
-        }
-}*/
 }
