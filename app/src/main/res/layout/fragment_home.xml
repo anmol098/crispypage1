@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
     tools:context="c.crispypage.fragment.Home">
 
     <ScrollView
@@ -20,20 +21,24 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/email1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:textColorHint="#607D8B">
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:hint="Email"/>
+                android:hint="Email"
+                />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/name1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/email1">
+            android:layout_below="@id/email1"
+            android:textColorHint="#607D8B"
+            android:layout_marginTop="10dp">
             <EditText
                 android:id="@+id/name"
                 android:layout_width="match_parent"
@@ -41,43 +46,18 @@
                 android:inputType="text"
                 android:hint="Full Name"/>
         </android.support.design.widget.TextInputLayout>
-        <Button
-            android:id="@+id/select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/name1"
-            android:text="Select Documents"
-            android:onClick="select"
-            />
 
-        <ProgressBar
-            android:id="@+id/progressbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/name1"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@+id/select"
-            android:layout_toRightOf="@+id/select"
-            android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/textViewStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/select"
-            android:layout_alignBottom="@+id/select"
-            android:layout_marginLeft="28dp"
-            android:layout_marginStart="28dp"
-            android:layout_toEndOf="@+id/progressbar"
-            android:layout_toRightOf="@+id/progressbar"
-            android:text="" />
+
+
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/copy1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/select">
+            android:layout_below="@id/name1"
+            android:textColorHint="#607D8B"
+            android:layout_marginTop="10dp">
             <EditText
                 android:id="@+id/copy"
                 android:layout_width="match_parent"
@@ -94,8 +74,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/copy1"
             android:hint="Do You Want Us To Bind It As Well?"
-            android:textColorHint="#05ab9a"
-            app:met_floatingLabel="normal" />
+            android:textColorHint="#607D8B"
+            app:met_floatingLabel="normal"
+            android:layout_marginTop="10dp"/>
 
         <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
             android:id="@+id/Orientation_Spinner"
@@ -103,8 +84,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Binding_Spinner"
             android:hint="Orientation"
-            android:textColorHint="#05ab9a"
-            app:met_floatingLabel="normal" />
+            android:textColorHint="#607D8B"
+            app:met_floatingLabel="normal"
+            android:layout_marginTop="10dp"/>
 
         <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
             android:id="@+id/Choice_Spinner"
@@ -112,8 +94,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Orientation_Spinner"
             android:hint="Choice"
-            android:textColorHint="#05ab9a"
-            app:met_floatingLabel="normal" />
+            android:textColorHint="#607D8B"
+            app:met_floatingLabel="normal"
+            android:layout_marginTop="10dp"/>
 
         <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
             android:id="@+id/Area_Spinner"
@@ -121,8 +104,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Choice_Spinner"
             android:hint="Area"
-            android:textColorHint="#05ab9a"
-            app:met_floatingLabel="normal" />
+            android:textColorHint="#607D8B"
+            app:met_floatingLabel="normal"
+            android:layout_marginTop="10dp"
+            />
 
 
 
@@ -132,7 +117,9 @@
             android:id="@+id/address1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Area_Spinner">
+            android:layout_below="@id/Area_Spinner"
+            android:textColorHint="#607D8B"
+            android:layout_marginTop="10dp">
             <EditText
                 android:id="@+id/address"
                 android:layout_width="match_parent"
@@ -144,7 +131,9 @@
             android:id="@+id/contact1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/address1">
+            android:layout_below="@id/address1"
+            android:textColorHint="#607D8B"
+            android:layout_marginTop="10dp">
             <EditText
                 android:id="@+id/contact"
                 android:layout_width="match_parent"
@@ -156,7 +145,9 @@
             android:id="@+id/suggest1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/contact1">
+            android:layout_below="@id/contact1"
+            android:textColorHint="#607D8B"
+            android:layout_marginTop="10dp">
             <EditText
                 android:id="@+id/suggest"
                 android:layout_width="match_parent"
@@ -164,13 +155,59 @@
                 android:inputType="textMultiLine"
                 android:hint="Suggestion"/>
         </android.support.design.widget.TextInputLayout>
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/suggest1"
-            android:text="PRINT"
-            android:onClick="submit"/>
+            android:layout_below="@+id/suggest1"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/select"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:onClick="select"
+                android:text="Select File" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:onClick="submit"
+                android:text="PRINT" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_toEndOf="@+id/progressbar"
+                android:layout_toRightOf="@+id/progressbar"
+                android:text="" />
+
+        </LinearLayout>
+
+
 
     </RelativeLayout>
     </ScrollView>

@@ -1,4 +1,0 @@
-#Tue Dec 19 21:34:56 IST 2017
-base.0=C\:\\Users\\Anmol Pratap Singh\\Desktop\\CrispyPage\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\28
-path.0=classes.dex
-renamed.0=classes.dex

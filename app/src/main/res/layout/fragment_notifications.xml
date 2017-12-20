@@ -4,7 +4,8 @@
     android:id="@+id/view_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/img_profile"
@@ -13,7 +14,7 @@
         android:layout_above="@+id/name"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="33dp"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/name"
@@ -24,7 +25,7 @@
         android:layout_marginBottom="225dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        tools:text="Anmol Pratap Singh" />
+        tools:text=" " />
 
     <TextView
         android:id="@+id/email"
@@ -33,5 +34,5 @@
         android:layout_below="@+id/img_profile"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="63dp"
-        tools:text="anmolpratapsingh1997@gamil.com" />
+        tools:text=" " />
 </RelativeLayout>

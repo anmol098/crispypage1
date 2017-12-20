@@ -168,6 +168,10 @@
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/9d32532592213ce15df3b33e12fdc865/res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_activity_welcome.xml.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/activity_welcome.xml"
+    },
+    {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
@@ -246,6 +250,10 @@
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_splash.gif.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/splash.gif"
     },
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -480,6 +488,10 @@
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_logo.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/logo.png"
+    },
+    {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
@@ -676,6 +688,10 @@
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/3ca451832bb3b9726ecb048bb069f184/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_activity_splash_screen.xml.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/activity_splash_screen.xml"
+    },
+    {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_abc_screen_simple_overlay_action_mode.xml.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
@@ -810,6 +826,10 @@
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_delivery_slide.xml.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/delivery_slide.xml"
     },
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -970,6 +990,10 @@
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_upload.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/upload.png"
     },
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -1660,6 +1684,10 @@
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/layout/select_dialog_item_material.xml"
     },
     {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_delivery.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable/delivery.png"
+    },
+    {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable_abc_ic_clear_material.xml.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable/abc_ic_clear_material.xml"
     },
@@ -2174,5 +2202,9 @@
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_upload_slide.xml.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/layout/upload_slide.xml"
     }
 ]

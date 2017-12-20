@@ -16,7 +16,7 @@
     <string name="hint_password">Password</string>
     <string name="hint_name">Fullname</string>
     <string name="btn_login">LOGIN</string>
-    <string name="btn_link_to_register">Not a member? Get registered with us now!</string>
+    <string name="btn_link_to_register">Not a member ? Get registered with us now!</string>
     <string name="btn_link_to_login">Already registered. Login Me!</string>
     <string name="title_activity_reset_password">ResetPasswordActivity</string>
     <string name="btn_forgot_password">Forgot your password?</string>
@@ -63,5 +63,16 @@
     <string name="action_logout">Logout</string>
     <string name="action_mark_all_read">Mark All as Read</string>
     <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Upload</string>
+    <string name="slide_1_desc">Upload your files on a single click!!</string>
+
+    <string name="slide_2_title">Fast Delivery</string>
+    <string name="slide_2_desc">Get the documents delivered within an hour!</string>
 
 </resources>
