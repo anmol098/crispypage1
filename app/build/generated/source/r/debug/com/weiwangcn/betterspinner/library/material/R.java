@@ -446,6 +446,7 @@ public final class R {
         public static final int alertTitle = 0x7f090025;
         public static final int always = 0x7f090027;
         public static final int beginning = 0x7f09002b;
+<<<<<<< Updated upstream
         public static final int buttonPanel = 0x7f090034;
         public static final int checkbox = 0x7f09003a;
         public static final int collapseActionView = 0x7f09003e;
@@ -507,6 +508,69 @@ public final class R {
         public static final int useLogo = 0x7f0900e8;
         public static final int withText = 0x7f0900ef;
         public static final int wrap_content = 0x7f0900f1;
+=======
+        public static final int buttonPanel = 0x7f090032;
+        public static final int checkbox = 0x7f090038;
+        public static final int collapseActionView = 0x7f09003c;
+        public static final int contentPanel = 0x7f090040;
+        public static final int custom = 0x7f090044;
+        public static final int customPanel = 0x7f090045;
+        public static final int decor_content_parent = 0x7f090047;
+        public static final int default_activity_button = 0x7f090048;
+        public static final int disableHome = 0x7f09004e;
+        public static final int edit_query = 0x7f090050;
+        public static final int end = 0x7f090053;
+        public static final int expand_activities_button = 0x7f090058;
+        public static final int expanded_menu = 0x7f090059;
+        public static final int highlight = 0x7f090062;
+        public static final int home = 0x7f090063;
+        public static final int homeAsUp = 0x7f090064;
+        public static final int icon = 0x7f090065;
+        public static final int ifRoom = 0x7f090068;
+        public static final int image = 0x7f090069;
+        public static final int listMode = 0x7f090074;
+        public static final int list_item = 0x7f090075;
+        public static final int middle = 0x7f09007a;
+        public static final int multiply = 0x7f09007c;
+        public static final int never = 0x7f09008a;
+        public static final int none = 0x7f09008b;
+        public static final int normal = 0x7f09008c;
+        public static final int parentPanel = 0x7f090093;
+        public static final int progress_circular = 0x7f090098;
+        public static final int progress_horizontal = 0x7f090099;
+        public static final int radio = 0x7f09009b;
+        public static final int screen = 0x7f0900a2;
+        public static final int scrollView = 0x7f0900a6;
+        public static final int search_badge = 0x7f0900a8;
+        public static final int search_bar = 0x7f0900a9;
+        public static final int search_button = 0x7f0900aa;
+        public static final int search_close_btn = 0x7f0900ab;
+        public static final int search_edit_frame = 0x7f0900ac;
+        public static final int search_go_btn = 0x7f0900ad;
+        public static final int search_mag_icon = 0x7f0900ae;
+        public static final int search_plate = 0x7f0900af;
+        public static final int search_src_text = 0x7f0900b0;
+        public static final int search_voice_btn = 0x7f0900b1;
+        public static final int select_dialog_listview = 0x7f0900b3;
+        public static final int shortcut = 0x7f0900b4;
+        public static final int showCustom = 0x7f0900b5;
+        public static final int showHome = 0x7f0900b6;
+        public static final int showTitle = 0x7f0900b7;
+        public static final int split_action_bar = 0x7f0900bf;
+        public static final int src_atop = 0x7f0900c2;
+        public static final int src_in = 0x7f0900c3;
+        public static final int src_over = 0x7f0900c4;
+        public static final int submit_area = 0x7f0900ca;
+        public static final int tabMode = 0x7f0900cd;
+        public static final int textSpacerNoButtons = 0x7f0900d0;
+        public static final int title = 0x7f0900d7;
+        public static final int title_template = 0x7f0900d9;
+        public static final int topPanel = 0x7f0900dc;
+        public static final int up = 0x7f0900e4;
+        public static final int useLogo = 0x7f0900e5;
+        public static final int withText = 0x7f0900eb;
+        public static final int wrap_content = 0x7f0900ed;
+>>>>>>> Stashed changes
     }
     public static final class integer {
         public static final int abc_config_activityDefaultDur = 0x7f0a0000;

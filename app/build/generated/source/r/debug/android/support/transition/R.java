@@ -75,6 +75,7 @@ public final class R {
         public static final int actions = 0x7f09001e;
         public static final int async = 0x7f090028;
         public static final int blocking = 0x7f09002c;
+<<<<<<< Updated upstream
         public static final int cancel_action = 0x7f090035;
         public static final int chronometer = 0x7f09003b;
         public static final int end_padder = 0x7f090056;
@@ -107,6 +108,40 @@ public final class R {
         public static final int transition_position = 0x7f0900e3;
         public static final int transition_scene_layoutid_cache = 0x7f0900e4;
         public static final int transition_transform = 0x7f0900e5;
+=======
+        public static final int cancel_action = 0x7f090033;
+        public static final int chronometer = 0x7f090039;
+        public static final int end_padder = 0x7f090054;
+        public static final int forever = 0x7f09005f;
+        public static final int ghost_view = 0x7f090061;
+        public static final int icon = 0x7f090065;
+        public static final int icon_group = 0x7f090066;
+        public static final int info = 0x7f09006c;
+        public static final int italic = 0x7f09006d;
+        public static final int line1 = 0x7f090072;
+        public static final int line3 = 0x7f090073;
+        public static final int media_actions = 0x7f090078;
+        public static final int normal = 0x7f09008c;
+        public static final int notification_background = 0x7f09008d;
+        public static final int notification_main_column = 0x7f09008e;
+        public static final int notification_main_column_container = 0x7f09008f;
+        public static final int parent_matrix = 0x7f090094;
+        public static final int right_icon = 0x7f09009d;
+        public static final int right_side = 0x7f09009e;
+        public static final int save_image_matrix = 0x7f09009f;
+        public static final int save_non_transition_alpha = 0x7f0900a0;
+        public static final int save_scale_type = 0x7f0900a1;
+        public static final int status_bar_latest_event_content = 0x7f0900c7;
+        public static final int text = 0x7f0900ce;
+        public static final int text2 = 0x7f0900cf;
+        public static final int time = 0x7f0900d6;
+        public static final int title = 0x7f0900d7;
+        public static final int transition_current_scene = 0x7f0900de;
+        public static final int transition_layout_save = 0x7f0900df;
+        public static final int transition_position = 0x7f0900e0;
+        public static final int transition_scene_layoutid_cache = 0x7f0900e1;
+        public static final int transition_transform = 0x7f0900e2;
+>>>>>>> Stashed changes
     }
     public static final class integer {
         public static final int cancel_button_image_alpha = 0x7f0a0004;
