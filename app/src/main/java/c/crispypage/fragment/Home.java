@@ -326,7 +326,7 @@ public class Home extends Fragment  {
                     @Override
                     public void onResponse(String response) {
                         loading.dismiss();
-                        Toast.makeText(getActivity(),response,Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(),"Order placed Successfully",Toast.LENGTH_LONG).show();
                     }
                 },
                 new Response.ErrorListener() {

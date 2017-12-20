@@ -800,6 +800,10 @@
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable-xhdpi/ic_account_circle_black_24dp.png"
+    },
+    {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_abc_action_bar_title_item.xml.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/layout/abc_action_bar_title_item.xml"
     },
@@ -1178,6 +1182,10 @@
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/layout_design_navigation_menu.xml.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/4a21a65b6060b3e95349d7cde5a45056/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable-xxhdpi/ic_account_circle_black_24dp.png"
     },
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -1776,6 +1784,10 @@
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },
     {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable-xxxhdpi/ic_account_circle_black_24dp.png"
+    },
+    {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/c8b4b28df96ba5d210b86bc48f933ef7/res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
@@ -1830,6 +1842,10 @@
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_expand_more_black_18dp.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/library-material-1.1.0.aar/e833ec7c7472458c03cc354e8a7eeeff/res/drawable-xxhdpi/ic_expand_more_black_18dp.png"
+    },
+    {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable-hdpi/ic_account_circle_black_24dp.png"
     },
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_dark.xml.flat",
@@ -2094,6 +2110,10 @@
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
         "source": "/Users/kjaganmohan/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/9d32532592213ce15df3b33e12fdc865/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
+    },
+    {
+        "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_account_circle_black_24dp.png.flat",
+        "source": "/Users/kjaganmohan/Desktop/crispypage1/app/src/main/res/drawable-mdpi/ic_account_circle_black_24dp.png"
     },
     {
         "merged": "/Users/kjaganmohan/Desktop/crispypage1/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",

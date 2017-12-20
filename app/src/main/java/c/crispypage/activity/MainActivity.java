@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity  {
                 .into(imgProfile);
 
         // showing dot next to notifications label
-        navigationView.getMenu().getItem(3).setActionView(R.layout.menu_dot);
+        navigationView.getMenu().getItem(1).setActionView(R.layout.menu_dot);
     }
 
     private void loadHomeFragment() {
@@ -250,23 +250,14 @@ public class MainActivity extends AppCompatActivity  {
                 // home
                 Home homeFragment = new Home();
                 return homeFragment;
+
+
             case 1:
-                // photos
-                PhotosFragment photosFragment = new PhotosFragment();
-                return photosFragment;
-            case 2:
-                // movies fragment
-                MoviesFragment moviesFragment = new MoviesFragment();
-                return moviesFragment;
-            case 3:
                 // notifications fragment
                 NotificationFragment notificationsFragment = new NotificationFragment();
                 return notificationsFragment;
 
-            case 4:
-                // settings fragment
-                SettingsFragment settingsFragment = new SettingsFragment();
-                return settingsFragment;
+
             default:
                 return new Home();
         }
@@ -298,32 +289,18 @@ public class MainActivity extends AppCompatActivity  {
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;
                         break;
-                    case R.id.nav_order:
-                        navItemIndex = 1;
-                        CURRENT_TAG = TAG_ORDER;
-                        break;
-                    case R.id.nav_pending_order:
-                        navItemIndex = 2;
-                        CURRENT_TAG = TAG_PENDING_ORDER;
-                        break;
+
                     case R.id.nav_support:
-                        navItemIndex = 3;
+                        navItemIndex = 1;
                         CURRENT_TAG = TAG_SUPPORT;
                         break;
-                    case R.id.nav_settings:
-                        navItemIndex = 4;
-                        CURRENT_TAG = TAG_SETTINGS;
-                        break;
+
                     case R.id.nav_about_us:
                         // launch new intent instead of loading fragment
                         startActivity(new Intent(getApplicationContext(), AboutUsActivity.class));
                         drawer.closeDrawers();
                         return true;
-                    case R.id.nav_privacy_policy:
-                        // launch new intent instead of loading fragment
-                        startActivity(new Intent(getApplicationContext(), PrivacyPolicyActivity.class));
-                        drawer.closeDrawers();
-                        return true;
+
                     default:
                         navItemIndex = 0;
                 }
@@ -400,7 +377,7 @@ public class MainActivity extends AppCompatActivity  {
         }
 
         // when fragment is notifications, load the menu created for notifications
-        if (navItemIndex == 3) {
+        if (navItemIndex == 1) {
             getMenuInflater().inflate(R.menu.notifications, menu);
         }
         return true;
