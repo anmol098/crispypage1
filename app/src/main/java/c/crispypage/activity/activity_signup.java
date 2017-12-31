@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,12 +18,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import c.crispypage.R;
 
 public class activity_signup extends AppCompatActivity {
 
-    private EditText inputEmail, inputPassword;
+    private EditText inputEmail, inputPassword, inputName;
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
@@ -44,6 +47,7 @@ public class activity_signup extends AppCompatActivity {
 
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
+        inputName =(EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -69,6 +73,7 @@ public class activity_signup extends AppCompatActivity {
 
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
+                String name = inputName.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -87,7 +92,7 @@ public class activity_signup extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
                 //create user
-                auth.createUserWithEmailAndPassword(email, password)
+                /*auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(activity_signup.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -100,15 +105,55 @@ public class activity_signup extends AppCompatActivity {
                                     Toast.makeText(activity_signup.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
+                                    updateprofile();
                                     startActivity(new Intent(activity_signup.this, MainActivity.class));
                                     finish();
                                 }
                             }
-                        });
+                        });*/
+
+                auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(activity_signup.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Toast.makeText(activity_signup.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
+
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(activity_signup.this, "Authentication failed." + task.getException(),
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+                            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()){
+                                        Log.i("Success", "Yes");
+                                    }
+                                    else{
+                                        Log.i("Success", "No");}
+                                }
+                            });
+                            updateprofile();
+                            startActivity(new Intent(activity_signup.this, LoginActivity.class));
+                            finish();
+                        }
+                    }
+                });
+
 
             }
         });
 
+    }
+    private void updateprofile()
+    {
+        auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        if(user!=null) {
+            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                    .setDisplayName(inputName.getText().toString()).build();
+            user.updateProfile(profileUpdates);
+        }
     }
 
     @Override

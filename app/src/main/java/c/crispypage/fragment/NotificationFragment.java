@@ -45,8 +45,7 @@ public class NotificationFragment extends Fragment {
         name =(TextView)view.findViewById(R.id.name);
         email = (TextView)view.findViewById(R.id.email);
 
-        /*name.setText("NAME");
-        email.setText("EMAIL");*/
+
         profileImg=(ImageView)view.findViewById(R.id.img_profile);
 
         if (user != null) {

@@ -171,28 +171,29 @@ public class MainActivity extends AppCompatActivity  {
 
     private void loadNavHeader() {
         FirebaseUser user = mAuth.getCurrentUser();
+    if(user!=null) {
+    txtName.setText(user.getDisplayName());
+    txtWebsite.setText(user.getEmail());
 
-        txtName.setText(user.getDisplayName());
-        txtWebsite.setText(user.getEmail());
+    // loading header background image
+    Glide.with(this)
+            .load(urlNavHeaderBg)
+            .crossFade()
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .into(imgNavHeaderBg);
 
-        // loading header background image
-        Glide.with(this)
-                .load(urlNavHeaderBg)
-                .crossFade()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(imgNavHeaderBg);
+    // Loading profile image
+    Glide.with(this)
+            .load(user.getPhotoUrl())
+            .crossFade()
+            .thumbnail(0.5f)
+            .bitmapTransform(new CircleTransform(this))
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .into(imgProfile);
 
-        // Loading profile image
-        Glide.with(this)
-                .load(user.getPhotoUrl())
-                .crossFade()
-                .thumbnail(0.5f)
-                .bitmapTransform(new CircleTransform(this))
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(imgProfile);
-
-        // showing dot next to notifications label
-        navigationView.getMenu().getItem(1).setActionView(R.layout.menu_dot);
+    // showing dot next to notifications label
+    navigationView.getMenu().getItem(1).setActionView(R.layout.menu_dot);
+}
     }
 
     private void loadHomeFragment() {

@@ -38,6 +38,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -68,20 +71,19 @@ import static android.app.Activity.RESULT_OK;
 public class Home extends Fragment  {
     public Home() {
     }
-
-
-
     private EditText editTextEmail;
     private EditText editTextName;
     private EditText editTextCopies;
     private EditText editTextAddress;
     private EditText editTextContact;
     private EditText editTextSuggest;
-     public Button buttonUpload, buttonAddDoc;
+    public Button buttonUpload, buttonAddDoc;
+
+    private int positionO,positionB,positionC,positionA;
 
     final static int PICK_PDF_CODE = 2342;
 
-    String fileTextUrl;
+    String fileTextUrl = null;
     private Activity rootView;
 
     String binding,choice,orientation,area;
@@ -93,6 +95,8 @@ public class Home extends Fragment  {
     ProgressBar progressBar;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
 
+    FirebaseAuth mAuth;
+
 
 
     @Nullable
@@ -100,6 +104,11 @@ public class Home extends Fragment  {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+
 
         textViewStatus = (TextView) view.findViewById(R.id.textViewStatus);
         progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
@@ -113,6 +122,12 @@ public class Home extends Fragment  {
 
         buttonUpload = (Button) view.findViewById(R.id.submit);
         buttonAddDoc = (Button) view.findViewById(R.id.select);
+
+        if (user != null) {
+            editTextEmail.setText(user.getEmail());
+            editTextName.setText(user.getDisplayName());
+
+        }
 
 
         mStorageReference = FirebaseStorage.getInstance().getReference();
@@ -128,6 +143,7 @@ public class Home extends Fragment  {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                positionB=position;
                 binding = parentView.getItemAtPosition(position).toString();
             }
             @Override
@@ -144,6 +160,7 @@ public class Home extends Fragment  {
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                positionA=position;
                 area = parentView.getItemAtPosition(position).toString();
             }
             @Override
@@ -161,6 +178,7 @@ public class Home extends Fragment  {
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                positionC=position;
                 choice = parentView.getItemAtPosition(position).toString();
             }
             @Override
@@ -178,6 +196,7 @@ public class Home extends Fragment  {
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                positionO=position;
                 orientation = parentView.getItemAtPosition(position).toString();
             }
             @Override
@@ -193,7 +212,19 @@ public class Home extends Fragment  {
             @Override
             public void onClick(View view)
             {
-                Submit();
+                if(editTextName.getText().toString().trim().length()>0&& editTextEmail.getText().toString().trim().length()>0 && editTextCopies.getText().toString().trim().length()>0 && editTextAddress.getText().toString().trim().length()>0 && editTextContact.getText().toString().trim().length()>0 && editTextSuggest.getText().toString().trim().length()>0 && positionA>0&&positionB>0&&positionC>0&&positionO>0 ) {
+                   if(fileTextUrl!= null) {
+                       Submit();
+                   }
+                   else
+                   {
+                       Snackbar.make(view, "Please Upload The Document To Be Printed", Snackbar.LENGTH_LONG).show();
+                   }
+            }
+            else
+                {
+                    Snackbar.make(view, "Required Fields Missing", Snackbar.LENGTH_LONG).show();
+                }
             }
         });
         buttonAddDoc.setOnClickListener(new View.OnClickListener()
@@ -251,7 +282,7 @@ public class Home extends Fragment  {
         Intent intent = new Intent();
         intent.setType("*/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PDF_CODE);
+        startActivityForResult(Intent.createChooser(intent, "Select Document"), PICK_PDF_CODE);
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -329,6 +360,12 @@ public class Home extends Fragment  {
                     public void onResponse(String response) {
                         loading.dismiss();
                         Toast.makeText(getActivity(),"Order placed Successfully",Toast.LENGTH_LONG).show();
+                        editTextName.setText(null);
+                        editTextEmail.setText(null);
+                        editTextCopies.setText(null);
+                        editTextAddress.setText(null);
+                        editTextContact.setText(null);
+                        editTextSuggest.setText(null);
                     }
                 },
                 new Response.ErrorListener() {

@@ -226,9 +226,10 @@
                 android:layout_marginStart="28dp"
                 android:textAllCaps="true"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="15sp"
                 android:textAlignment="gravity"
-                android:text="skjhgsljnhksjdfnksdjfnh"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
                 android:layout_weight="1"/>
         </LinearLayout>
 
