@@ -86,7 +86,6 @@ public class MainActivity extends AppCompatActivity  {
     private FloatingActionButton fab;
 
     private static final String urlNavHeaderBg = "https://api.androidhive.info/images/nav-menu-header-bg.jpg";
-    private static final String urlProfileImg = " ";
 
     public static int navItemIndex = 0;
 
@@ -254,9 +253,13 @@ public class MainActivity extends AppCompatActivity  {
 
 
             case 1:
-                // notifications fragment
+                // Profile fragment
                 NotificationFragment notificationsFragment = new NotificationFragment();
                 return notificationsFragment;
+            case 2:
+                // Order fragment
+                MoviesFragment moviesFragment = new MoviesFragment();
+                return moviesFragment;
 
 
             default:
@@ -294,6 +297,10 @@ public class MainActivity extends AppCompatActivity  {
                     case R.id.nav_support:
                         navItemIndex = 1;
                         CURRENT_TAG = TAG_SUPPORT;
+                        break;
+                    case R.id.nav_order:
+                        navItemIndex = 2;
+                        CURRENT_TAG = TAG_ORDER;
                         break;
 
                     case R.id.nav_about_us:

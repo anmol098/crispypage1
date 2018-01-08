@@ -117,30 +117,42 @@
 
         </LinearLayout>
 
-
-
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/linear2"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:id="@+id/linear3">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/address1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/linear2"
             android:textColorHint="#607D8B"
+            android:layout_weight="1.85"
             android:layout_marginTop="10dp">
             <EditText
                 android:id="@+id/address"
                 android:layout_width="match_parent"
-                android:inputType="textPostalAddress"
+                android:inputType="textMultiLine"
                 android:textColor="#ffffff"
                 android:layout_height="wrap_content"
                 android:hint="Address"/>
         </android.support.design.widget.TextInputLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/location"
+            android:layout_weight="0.15"
+            android:src="@android:drawable/ic_menu_mylocation" />
+</LinearLayout>
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/contact1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/address1"
+            android:layout_below="@id/linear3"
             android:textColorHint="#607D8B"
             android:layout_marginTop="10dp">
 
